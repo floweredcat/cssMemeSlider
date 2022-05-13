@@ -24,6 +24,7 @@
 
 .carousel-captions {
     height: 16px;
+    overflow: hidden;
 }
 
 .body {
@@ -32,15 +33,21 @@
     flex-direction: column;
     gap: 44px;
     align-items: center;
+    margin: 0;
+}
+
+@media all and (max-width: 768px) {
+    .body {
+        gap: 13px;
+    }
 }
 
 .header {
     overflow: hidden;
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 95%;
+    margin: 15px auto 0;
     height: fit-content;
-    height: 320px;
-    width: 700px;
+    max-height: 320px;
 }
 
 .carousel {
@@ -49,11 +56,10 @@
     gap: 40px;
     position: relative;
     transition: all 2s ease-in-out;
+    width: 700px;
 }
 
 .figure {
-    width: 100%;
-    box-sizing: border-box;
     margin: 0;
 }
 
@@ -70,10 +76,17 @@
 .slider-buttons {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 95%;
     overflow: hidden;
     position: relative;
     transition: all 2s ease-in-out;
+}
+
+@media all and (max-width: 768px) {
+    .slider-buttons {
+        flex-direction: column-reverse;
+        gap: 13px;
+    }
 }
 
 .figure-title {
@@ -87,6 +100,12 @@
     width: 300px;
 }
 
+@media all and (max-width: 768px) {
+    .figure-title {
+        text-align: left;
+    }
+}
+
 .slider-button {
     padding: 4px;
     font-family: inherit;
@@ -96,6 +115,13 @@
     background-color: #71abff;
     cursor: pointer;
     transition: background-color 1s;
+}
+
+@media all and (max-width: 768px) {
+    .slider {
+        margin: 0 auto;
+        width: 56px;
+    }
 }
 
 .slider-button:hover {

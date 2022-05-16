@@ -6,7 +6,7 @@
     transform: translate(-1480px);
 }
 
-.tofourthPic {
+.toFourthPic {
     transform: translate(-2220px);
 }
 
@@ -24,7 +24,7 @@
 
 .carousel-captions {
     height: 16px;
-    overflow: hidden;
+    transition: all 1s ease-in-out;
 }
 
 .body {
@@ -55,7 +55,7 @@
     flex-wrap: nowrap;
     gap: 40px;
     position: relative;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
     width: 700px;
 }
 
@@ -79,7 +79,7 @@
     width: 95%;
     overflow: hidden;
     position: relative;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 @media all and (max-width: 768px) {
@@ -107,8 +107,9 @@
 }
 
 .slider-button {
+    position: relative;
     padding: 4px;
-    font-family: inherit;
+    top: -4px;
     appearance: none;
     border: 0;
     border-radius: 4px;
@@ -124,7 +125,16 @@
     }
 }
 
-.slider-button:hover {
+.button-wrapper {
+    padding: 4px;
+    cursor: pointer;
+    align-items: center;
+    grid-auto-flow: column;
+    gap: 4px;
+    margin-top: -8px;
+}
+
+.button-wrapper:hover .slider-button {
     background-color: white;
     transition: background-color 1s;
 }
@@ -149,8 +159,8 @@
 }
 
 .slider {
+    padding-top: 4px;
     display: flex;
-    gap: 8px;
     height: 8px;
     padding-right: 4px;
 }
